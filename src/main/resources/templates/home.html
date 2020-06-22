@@ -7,6 +7,8 @@
 </head>
 <body>
 <header th:insert="fragments/header :: header"></header>
+<a href="/file-form">file form</a>
+<a href="/cars">Cars</a>
 <main role="main">
 
     <section class="jumbotron text-center">
@@ -165,6 +167,13 @@
         </div>
     </div>
 </main>
+<div>
+    <p th:text="${bird.id}"></p>
+    <p th:text="${bird.name}"></p>
+</div>
+<div class="root"></div>
 <footer th:insert="fragments/footer :: footer"></footer>
+    <script src="/js/index.js" type="text/javascript"></script>
+    <script src="/js/extraContent.js" type="text/javascript"></script>
 </body>
 </html>
