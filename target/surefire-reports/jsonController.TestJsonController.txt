@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: jsonController.TestJsonController
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.956 s <<< FAILURE! - in jsonController.TestJsonController
+jsonController.TestJsonController.checkGetCars  Time elapsed: 0.919 s  <<< ERROR!
+java.lang.NullPointerException
+	at jsonController.TestJsonController.checkGetCars(TestJsonController.java:28)
+

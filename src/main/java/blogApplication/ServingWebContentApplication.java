@@ -9,8 +9,7 @@ import simpleObjects.Bird;
 
 import java.io.File;
 
-@ComponentScan(basePackages = {"blogApplication.repo", "blogApplication.models",
-"blogApplication.controllers"})
+@ComponentScan(basePackages = {"blogApplication.repo", "blogApplication.models", "blogApplication.controllers"})
 @SpringBootApplication
 public class ServingWebContentApplication {
 

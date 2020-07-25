@@ -4,9 +4,9 @@ import blogApplication.models.Car;
 import blogApplication.models.Maker;
 import blogApplication.models.Post;
 import blogApplication.models.ShopLocation;
-import blogApplication.repo.CarRepository;
 import blogApplication.repo.MakerRepository;
 import blogApplication.repo.PostRepository;
+import blogApplication.repo.CarRepository;
 import blogApplication.repo.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,18 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
-import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -187,9 +182,13 @@ public class BlogController {
 
     @GetMapping("/get_resources")
     public void getResources(HttpServletResponse response) throws IOException {
-        Path path = Paths.get(uploadDir + "2.jpg");
 
-        response.setContentType("image/jpg");
+        Path path = Paths.get("C:\\Users\\роман\\IdeaProjects\\BlogWebAppSpringBoot\\src\\main\\resources\\static\\upload\\20200322_152411.jpg");
+        File file = new File("C:\\Users\\роман\\IdeaProjects\\BlogWebAppSpringBoot\\src\\main\\resources\\static\\upload\\20200322_152411.jpg");
+/*
+        InputStream is = new BufferedInputStream(new FileInputStream(file));
+        response.setContentType("image/jpeg");
+        FileCopyUtils.copy(is, response.getOutputStream());*/
         Files.copy(path, response.getOutputStream());
     }
 }

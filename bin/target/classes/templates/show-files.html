@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img th:src="'/upload/' + ${file}" />
+    <div th:if="${file.length() > 5}">
+        <p th:text="${file}" />
+    </div>
+    <div></div>
+</body>
+</html>

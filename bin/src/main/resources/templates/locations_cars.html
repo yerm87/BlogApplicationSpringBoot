@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <head th:insert="fragments/header :: header"></head>
+    <ul th:each="location : ${locations}">
+        <li th:text="${location.name}"></li>
+    </ul>
+    <footer th:insert="fragments/footer :: footer"></footer>
+</body>
+</html>

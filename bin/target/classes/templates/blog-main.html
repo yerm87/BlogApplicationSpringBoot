@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blog of the website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="fragments/header :: header"></header>
+<div class="container mt-5">
+    <h1>Blog of the website</h1>
+    <div th:each="item : ${posts}" class="alert alert-info mt-2">
+        <h3 th:text="${item.title}" />
+        <p th:text="${item.anons}" />
+        <a th:href="'/blog_info?b_id=' + ${item.id}" class="btn btn-warning">Details</a>
+    </div>
+</div>
+<footer th:insert="fragments/footer :: footer"></footer>
+</body>
+</html>

@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import simpleObjects.Bird;
 
-import java.nio.file.Path;
-
 @Controller
 public class MainController {
 

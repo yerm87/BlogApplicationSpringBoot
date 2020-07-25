@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header th:insert="fragments/header :: header" />
+    <div th:each="car : ${cars}">
+        <p th:text="${car.name}" />
+        <p th:text="${car.age}" />
+    </div>
+    <footer th:insert="fragments/footer" :: footer />
+</body>
+</html>
