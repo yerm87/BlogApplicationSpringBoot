@@ -4,7 +4,6 @@ simpleObjects\Bird.class
 blogApplication\repo\ShopRepository.class
 blogApplication\models\Car.class
 blogApplication\models\ShopLocation.class
-blogApplication\controllers\JsonController.class
 blogApplication\repo\MakerRepository.class
 blogApplication\models\Post.class
 blogApplication\repo\CustomQueryRepository.class

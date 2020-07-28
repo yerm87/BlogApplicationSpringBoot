@@ -2,10 +2,11 @@ C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\r
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\models\Car.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\simpleObjects\Bird.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\controllers\BlogController.java
-C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\controllers\JsonController.java
+C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\controllers\RestfulController.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\models\Maker.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\ServingWebContentApplication.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\controllers\MainController.java
+C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\service\MediaFilesHandling.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\models\ShopLocation.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\repo\MakerRepository.java
 C:\Users\роман\IdeaProjects\BlogWebAppSpringBoot\src\main\java\blogApplication\models\Post.java

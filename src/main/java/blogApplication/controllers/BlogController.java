@@ -8,10 +8,12 @@ import blogApplication.repo.MakerRepository;
 import blogApplication.repo.PostRepository;
 import blogApplication.repo.CarRepository;
 import blogApplication.repo.ShopRepository;
+import blogApplication.service.MediaFilesHandling;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -41,6 +43,9 @@ public class BlogController {
 
     @Autowired
     public CarRepository carRepository;
+
+    @Autowired
+    public MediaFilesHandling mediaFilesHandling;
 
     @GetMapping("/blog")
     public String getBlogMain(Model model){
@@ -190,5 +195,29 @@ public class BlogController {
         response.setContentType("image/jpeg");
         FileCopyUtils.copy(is, response.getOutputStream());*/
         Files.copy(path, response.getOutputStream());
+    }
+
+    @GetMapping("/upload-file")
+    public String uploadFile(){
+        return "mediaFromS3Bucket";
+    }
+
+    @PostMapping("/image-handler")
+    public String imageHandler(@RequestParam(name="image-file") MultipartFile multipart) throws IOException {
+
+        mediaFilesHandling.sendMediaData(multipart);
+
+        return "redirect:/blog";
+    }
+
+    @GetMapping("/media")
+    public String getMedia(){
+        return "media-show";
+    }
+
+    @GetMapping("/blog/media/{param}")
+    public void getMediaContent(HttpServletResponse response,
+                                @PathVariable(value="param") String param) throws IOException {
+        mediaFilesHandling.getMediaData(response, param);
     }
 }
